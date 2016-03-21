@@ -19,7 +19,7 @@ def server_udp(port=None):
     while True:
         try:
             data = s.recv(100)
-            print(data.encode('utf8'))
+            print(data.decode('utf8'))
             if data == b'Done':
                 break
         except socket.timeout:
